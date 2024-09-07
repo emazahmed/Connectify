@@ -2,7 +2,7 @@ import { ID } from "appwrite";
 
 import { INewUser } from "@/types"
 import { account, appwriteConfig, avatars, databases } from "./config";
-import { ImageUp } from "lucide-react";
+
 export async function createUserAccount(user: INewUser){
     try {
         const newAccount = await account.create(
@@ -20,7 +20,7 @@ export async function createUserAccount(user: INewUser){
             accountId: newAccount.$id,
             name: newAccount.name,
             email: newAccount.email,
-            username: user.username
+            username: user.username,
             imageUrl: avatarUrl,
         })
 
@@ -35,7 +35,7 @@ export async function saveUserToDB(user: {
     accountId: string;
     email: string;
     name: string;
-    ImageUrl: URL;
+    imageUrl: URL;
     username?: string;
 }) {
     try {
