@@ -29,4 +29,4 @@ const Bottombar = () => {
   )
 }
 
-export default Bottombar
+export default Bottombar;
