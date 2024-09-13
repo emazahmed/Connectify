@@ -7,12 +7,12 @@ import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "../ui/textarea"
-import FileUploader from "../ui/shared/FileUploader"
+import FileUploader from "../shared/FileUploader"
 import { PostValidation } from "@/lib/validation"
 import { Models } from "appwrite"
 import { useCreatePost } from "@/lib/react-query/queriesAndMutations"
 import { useUserContext } from "@/context/AuthContext"
-import { toast, useToast } from "@/hooks/use-toast"
+import { useToast } from "@/hooks/use-toast"
  
 type PostFormProps = {
     post?: Models.Document;
@@ -41,7 +41,7 @@ const PostForm = ({ post }: PostFormProps) => {
     if(!newPost){
       toast({
         title: 'Please try again',
-      })
+      });
     }
     navigate('/');
   }

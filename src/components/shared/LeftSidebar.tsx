@@ -1,4 +1,4 @@
-import { Button } from '../button'
+import { Button } from '../ui/button'
 import { useSignOutAccount } from '@/lib/react-query/queriesAndMutations'
 import { useEffect } from "react";
 import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
